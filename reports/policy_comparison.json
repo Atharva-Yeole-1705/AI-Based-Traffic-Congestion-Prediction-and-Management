@@ -1,0 +1,161 @@
+{
+  "evaluation": {
+    "test_hours_per_seed": 168,
+    "synthetic_directional_scenarios": 5,
+    "arrival_data": "chronological UCI held-out test traffic volumes",
+    "policies": {
+      "fixed": "27 seconds green per approach plus 3 seconds clearance",
+      "forecast": "LSTM one-hour volume forecast; Webster-style cycle and synthetic direction split"
+    },
+    "simulation_assumptions": [
+      "UCI records one westbound highway station, not an intersection.",
+      "The four-way approach split is synthetic and perturbed by each recorded seed.",
+      "Highway volume is scaled to 25% to create a synthetic intersection demand.",
+      "Service is one vehicle per two green seconds per approach.",
+      "These are queue-model results, not measured real-world intersection outcomes."
+    ]
+  },
+  "per_seed_results": [
+    {
+      "policy": "fixed",
+      "seed": 1,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 2053.834771344981,
+      "mean_wait_seconds_per_arrival_to_horizon": 2053.834771344981,
+      "mean_queue_vehicles": 456.1666187169312,
+      "max_queue_vehicles": 1615,
+      "vehicles_remaining": 0
+    },
+    {
+      "policy": "forecast",
+      "seed": 1,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 283.4093680441305,
+      "mean_wait_seconds_per_arrival_to_horizon": 283.4093680441305,
+      "mean_queue_vehicles": 62.946588955026456,
+      "max_queue_vehicles": 388,
+      "vehicles_remaining": 0
+    },
+    {
+      "policy": "fixed",
+      "seed": 2,
+      "hours": 168,
+      "arrivals": 134330,
+      "vehicles_passed": 134328,
+      "mean_wait_seconds_served": 2010.7366520755168,
+      "mean_wait_seconds_per_arrival_to_horizon": 2010.7070200253108,
+      "mean_queue_vehicles": 446.5910615079365,
+      "max_queue_vehicles": 1543,
+      "vehicles_remaining": 2
+    },
+    {
+      "policy": "forecast",
+      "seed": 2,
+      "hours": 168,
+      "arrivals": 134330,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 270.67173134617246,
+      "mean_wait_seconds_per_arrival_to_horizon": 270.6697759249609,
+      "mean_queue_vehicles": 60.11751157407407,
+      "max_queue_vehicles": 353,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "fixed",
+      "seed": 3,
+      "hours": 168,
+      "arrivals": 134330,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 2110.980733869827,
+      "mean_wait_seconds_per_arrival_to_horizon": 2110.9651083153426,
+      "mean_queue_vehicles": 468.85903273809527,
+      "max_queue_vehicles": 1640,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "forecast",
+      "seed": 3,
+      "hours": 168,
+      "arrivals": 134330,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 292.03620960477633,
+      "mean_wait_seconds_per_arrival_to_horizon": 292.034124916251,
+      "mean_queue_vehicles": 64.86267195767196,
+      "max_queue_vehicles": 365,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "fixed",
+      "seed": 4,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134328,
+      "mean_wait_seconds_served": 1960.5298001905783,
+      "mean_wait_seconds_per_arrival_to_horizon": 1960.515242427175,
+      "mean_queue_vehicles": 435.4399007936508,
+      "max_queue_vehicles": 1588,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "forecast",
+      "seed": 4,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134328,
+      "mean_wait_seconds_served": 280.3075382645465,
+      "mean_wait_seconds_per_arrival_to_horizon": 280.3054887626648,
+      "mean_queue_vehicles": 62.25720238095238,
+      "max_queue_vehicles": 361,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "fixed",
+      "seed": 5,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134328,
+      "mean_wait_seconds_served": 2037.7896492168425,
+      "mean_wait_seconds_per_arrival_to_horizon": 2037.774761965026,
+      "mean_queue_vehicles": 452.5996130952381,
+      "max_queue_vehicles": 1702,
+      "vehicles_remaining": 1
+    },
+    {
+      "policy": "forecast",
+      "seed": 5,
+      "hours": 168,
+      "arrivals": 134329,
+      "vehicles_passed": 134329,
+      "mean_wait_seconds_served": 297.3446091313119,
+      "mean_wait_seconds_per_arrival_to_horizon": 297.3446091313119,
+      "mean_queue_vehicles": 66.04167328042328,
+      "max_queue_vehicles": 404,
+      "vehicles_remaining": 0
+    }
+  ],
+  "fixed": {
+    "vehicles_passed": 134328.4,
+    "mean_wait_seconds_served": 2034.774321339549,
+    "mean_wait_seconds_per_arrival_to_horizon": 2034.759380815567,
+    "mean_queue_vehicles": 451.9312453703704,
+    "max_queue_vehicles": 1617.6,
+    "vehicles_remaining": 1.0
+  },
+  "forecast": {
+    "vehicles_passed": 134328.8,
+    "mean_wait_seconds_served": 284.75389127818755,
+    "mean_wait_seconds_per_arrival_to_horizon": 284.7526733558638,
+    "mean_queue_vehicles": 63.24512962962963,
+    "max_queue_vehicles": 374.2,
+    "vehicles_remaining": 0.6
+  },
+  "relative_change_percent": {
+    "vehicles_passed": 0.0002977776851314981,
+    "mean_wait_seconds_served": -86.0056278334235,
+    "mean_wait_seconds_per_arrival_to_horizon": -86.00558493350059
+  }
+}

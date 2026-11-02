@@ -1,0 +1,197 @@
+{
+  "dataset": {
+    "name": "UCI Metro Interstate Traffic Volume",
+    "citation": "Hogue, J. (2019). Metro Interstate Traffic Volume [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5X60B.",
+    "station": "I-94 westbound ATR station 301, Minneapolis-St Paul",
+    "observations": 48204,
+    "target": "traffic_volume (vehicles per hour)",
+    "chronological_split": "70% train / 15% validation / 15% test"
+  },
+  "model": {
+    "architecture": "1-layer LSTM (1 input feature, 32 hidden units) + linear output",
+    "framework": "PyTorch 2.14.1+cpu",
+    "training_device": "CPU",
+    "trainable_parameters": 4513,
+    "input_feature": "traffic_volume only",
+    "input_window_hours": 24,
+    "forecast_horizon_hours": 1,
+    "normalization": "z-score using training-partition mean and standard deviation",
+    "optimizer": "Adam",
+    "loss": "mean squared error",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 30,
+    "early_stopping_patience": 5,
+    "seed": 42,
+    "best_epoch": 27,
+    "best_validation_mse_normalized": 0.04215440899133682
+  },
+  "test_metrics": {
+    "mae": 267.28214343479374,
+    "rmse": 397.0750423296589,
+    "wape_percent": 8.140622042862217
+  },
+  "persistence_baseline_metrics": {
+    "mae": 485.7503803070115,
+    "rmse": 740.2076867895616,
+    "wape_percent": 14.7945171437188
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "training_mse": 0.347825740314271,
+      "validation_mse": 0.09680157154798508
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.12294542047892455,
+      "validation_mse": 0.07489266246557236
+    },
+    {
+      "epoch": 3,
+      "training_mse": 0.10907467038236597,
+      "validation_mse": 0.06900131702423096
+    },
+    {
+      "epoch": 4,
+      "training_mse": 0.10296220433233655,
+      "validation_mse": 0.061355821788311005
+    },
+    {
+      "epoch": 5,
+      "training_mse": 0.09777968853811075,
+      "validation_mse": 0.057867150753736496
+    },
+    {
+      "epoch": 6,
+      "training_mse": 0.09290038779120731,
+      "validation_mse": 0.053753625601530075
+    },
+    {
+      "epoch": 7,
+      "training_mse": 0.08920146865726358,
+      "validation_mse": 0.050169069319963455
+    },
+    {
+      "epoch": 8,
+      "training_mse": 0.08651077766922687,
+      "validation_mse": 0.04972849786281586
+    },
+    {
+      "epoch": 9,
+      "training_mse": 0.08477063589644351,
+      "validation_mse": 0.0474078431725502
+    },
+    {
+      "epoch": 10,
+      "training_mse": 0.08348351905171122,
+      "validation_mse": 0.04580283910036087
+    },
+    {
+      "epoch": 11,
+      "training_mse": 0.0821498133711907,
+      "validation_mse": 0.04558246210217476
+    },
+    {
+      "epoch": 12,
+      "training_mse": 0.08118209333329009,
+      "validation_mse": 0.047192078083753586
+    },
+    {
+      "epoch": 13,
+      "training_mse": 0.08109178432394964,
+      "validation_mse": 0.0447322353720665
+    },
+    {
+      "epoch": 14,
+      "training_mse": 0.0801793127174592,
+      "validation_mse": 0.044537656009197235
+    },
+    {
+      "epoch": 15,
+      "training_mse": 0.07908595255476362,
+      "validation_mse": 0.045924052596092224
+    },
+    {
+      "epoch": 16,
+      "training_mse": 0.07899733128930879,
+      "validation_mse": 0.04491816833615303
+    },
+    {
+      "epoch": 17,
+      "training_mse": 0.0783240648616399,
+      "validation_mse": 0.045090582221746445
+    },
+    {
+      "epoch": 18,
+      "training_mse": 0.07798040989023827,
+      "validation_mse": 0.0466945506632328
+    },
+    {
+      "epoch": 19,
+      "training_mse": 0.07764146294906843,
+      "validation_mse": 0.043796464800834656
+    },
+    {
+      "epoch": 20,
+      "training_mse": 0.0771801890134175,
+      "validation_mse": 0.04488711059093475
+    },
+    {
+      "epoch": 21,
+      "training_mse": 0.07679073084915856,
+      "validation_mse": 0.04486808180809021
+    },
+    {
+      "epoch": 22,
+      "training_mse": 0.0766203917573568,
+      "validation_mse": 0.04387480020523071
+    },
+    {
+      "epoch": 23,
+      "training_mse": 0.07591587469866497,
+      "validation_mse": 0.046184856444597244
+    },
+    {
+      "epoch": 24,
+      "training_mse": 0.07591121858075899,
+      "validation_mse": 0.043520960956811905
+    },
+    {
+      "epoch": 25,
+      "training_mse": 0.07538004945631065,
+      "validation_mse": 0.04288157820701599
+    },
+    {
+      "epoch": 26,
+      "training_mse": 0.07503936693820956,
+      "validation_mse": 0.043912824243307114
+    },
+    {
+      "epoch": 27,
+      "training_mse": 0.07482291864920315,
+      "validation_mse": 0.04215440899133682
+    },
+    {
+      "epoch": 28,
+      "training_mse": 0.07436488030727058,
+      "validation_mse": 0.043099768459796906
+    },
+    {
+      "epoch": 29,
+      "training_mse": 0.07394369081872745,
+      "validation_mse": 0.04289935156702995
+    },
+    {
+      "epoch": 30,
+      "training_mse": 0.07386138362202245,
+      "validation_mse": 0.04414365440607071
+    }
+  ],
+  "artifact": "artifacts\\traffic_lstm.pt",
+  "limitations": [
+    "The source is a single westbound highway station, not a four-way intersection.",
+    "The model predicts one hour ahead from the previous 24 hourly volume readings.",
+    "Reported prediction metrics are from a chronological held-out test partition."
+  ]
+}

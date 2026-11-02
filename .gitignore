@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets and environment-specific configuration
+.env
+.env.*
+!.env.example
+
+# Downloaded training data and generated model checkpoints
+data/
+artifacts/
